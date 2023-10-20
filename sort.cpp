@@ -101,13 +101,31 @@ void countingSort(int a[], int cnt[], int &n)
         }
     }
 }
+// bổ trợ cho mergsort
+// trộn 2 dãy đã sắp xếp thành 1 dãy đã sắp xếp
+int cmp(const void *a, const void *b){
+    const int *x= (int*)a;
+    const int *y= (int*)b;    
+    if(*x>*y)
+        return -1;
+    else if(*x<*y)
+        return 1;
+    return 0;
+}
+void q(int a[], int n){
+    qsort(a, n, sizeof(int), cmp);
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+}
 int main()
 {
-    // nhapMang(a, n);
+    nhapMang(a, n);
     // selectionSort(a, n);
     // cout << endl;
     // bubbleSort(a, n);
     // cout << endl;
     // insertionSort(a, n);
-    countingSort(a, cnt, n);
+    //countingSort(a, cnt, n);
+    q(a, n);
 }
