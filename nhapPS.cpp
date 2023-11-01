@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-typedef struct PS
+typedef struct sinhVien
 {
     int ts, ms;
 } PS;
