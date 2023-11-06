@@ -62,6 +62,6 @@
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "python.formatting.provider": "none",
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": "multiple",
   "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

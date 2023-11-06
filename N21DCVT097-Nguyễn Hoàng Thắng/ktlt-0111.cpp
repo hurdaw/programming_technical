@@ -24,7 +24,7 @@ void nhapSv(sv &a)
 }
 void countingSort(sv a[], int n)
 {
-    int maxScore = 0;
+    int maxScore = a->mssv[0];
     for (int i = 0; i < n; i++)
     {
     }
