@@ -4,16 +4,31 @@ using namespace std;
 // dùng linear tìm tất cả phân tử trong mảng.
 // dùng binary search tìm phần tử bất kỳ trong mảng
 int a[100], n;
-// typedef struct sinhVien{
-//     char mssv;
-//     int score;
-// }sv;
-// void nhapSv(sv a[], int &n){
-//     cin>>n;
-//     for(int i=0;i<n;i++){
-
-//     }
-// }
+typedef struct sinhVien
+{
+    int mssv[10];
+    int score[100];
+    int numberOfStudent;
+} sv;
+void nhapSv(sv &a)
+{
+    cout << "nhap so luong sinh vien: ";
+    cin >> a.numberOfStudent;
+    for (int i = 0; i < a.numberOfStudent; i++)
+    {
+        cout << "nhap mssv: ";
+        cin >> a.mssv[i];
+        cout << "nhap diem: ";
+        cin >> a.score[i];
+    }
+}
+void countingSort(sv a[], int n)
+{
+    int maxScore = 0;
+    for (int i = 0; i < n; i++)
+    {
+    }
+}
 void nhapMang(int a[], int &n)
 {
     cin >> n;
@@ -22,10 +37,11 @@ void nhapMang(int a[], int &n)
         cin >> a[i];
     }
 }
-int binarySearch(int a[], int &x, int n)
+int binarySearch(int a[], int &x)
 {
     cout << "nhap so can tim: ";
     cin >> x;
+    int n = sizeof(*a) / sizeof(a[0]);
     int left = 0;
     int right = n - 1;
     while (left <= right)
@@ -55,10 +71,11 @@ int linear1Element(int a[], int n, int &x)
 int main()
 {
     int x;
-    nhapMang(a, n);
-    int kq2 = binarySearch(a, x, n);
-    cout << "so can tim o vi tri: " << kq2 << endl;
-    int kq1 = linear1Element(a, n, x);
-    cout << "so can tim o vi tri: " << kq1 << endl;
-  
+    sv a;
+    // nhapMang(a, n);
+    // int kq2 = binarySearch(a, x);
+    // cout << "so can tim o vi tri: " << kq2 << endl;
+    //  int kq1 = linear1Element(a, n, x);
+    //  cout << "so can tim o vi tri: " << kq1 << endl;
+    nhapSv(a);
 }
